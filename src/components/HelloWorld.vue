@@ -1,38 +1,49 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from "vue";
 
-defineProps<{ msg: string }>()
+defineProps<{ msg: string }>();
 
-const count = ref(0)
+const count = ref(0);
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <h1 class="text-5xl font-bold my-8">{{ msg }}</h1>
 
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
+  <div class="p-8">
+    <button
+      class="rounded-lg border border-solid border-transparent py-2.5 px-5 text-sm font-500 cursor-pointer transition-colors duration-300 hover:border-[#646cff] bg-slate-50 font-mono"
+      @click="count++"
+    >
+      count is {{ count }}
+    </button>
+    <p class="my-4">
+      Edit <code class="text-sm">components/HelloWorld.vue</code> to test HMR
     </p>
   </div>
 
-  <p>
+  <p class="my-4">
     Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
+    <a
+      class="text-[#646cff] hover:text-[#535bf2] font-500 decoration-inherit"
+      href="https://vuejs.org/guide/quick-start.html#local"
+      target="_blank"
+    >
+      create-vue
+    </a>
+    , the official Vue + Vite starter
   </p>
-  <p>
+  <p class="my-4">
     Install
-    <a href="https://github.com/vuejs/language-tools" target="_blank">Volar</a>
+    <a
+      class="text-[#646cff] hover:text-[#535bf2] font-500 decoration-inherit"
+      href="https://github.com/vuejs/language-tools"
+      target="_blank"
+    >
+      Volar
+    </a>
     in your IDE for a better DX
   </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+  <p class="text-gray-500 my-4">
+    Click on the Vite and Vue logos to learn more
+  </p>
 </template>
-
-<style scoped>
-.read-the-docs {
-  color: #888;
-}
-</style>
