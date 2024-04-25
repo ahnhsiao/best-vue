@@ -24,6 +24,6 @@ import HelloWorld from "./components/HelloWorld.vue";
 
 <style scoped>
 .logo {
-  @apply h-24 p-6 box-content will-change-[filter] transition-[filter] duration-300;
+  @apply box-content h-24 p-6 transition-[filter]  duration-300 will-change-[filter];
 }
 </style>

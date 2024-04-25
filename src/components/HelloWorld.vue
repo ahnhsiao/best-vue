@@ -7,11 +7,11 @@ const count = ref(0);
 </script>
 
 <template>
-  <h1 class="text-5xl font-bold my-8">{{ msg }}</h1>
+  <h1 class="my-8 text-5xl font-bold">{{ msg }}</h1>
 
   <div class="p-8">
     <button
-      class="rounded-lg border border-solid border-transparent py-2.5 px-5 text-sm font-500 cursor-pointer transition-colors duration-300 hover:border-[#646cff] bg-slate-50 font-mono"
+      class="font-500 cursor-pointer rounded-lg border border-solid border-transparent bg-slate-50 px-5 py-2.5 font-mono text-sm transition-colors duration-300 hover:border-[#646cff]"
       @click="count++"
     >
       count is {{ count }}
@@ -24,7 +24,7 @@ const count = ref(0);
   <p class="my-4">
     Check out
     <a
-      class="text-[#646cff] hover:text-[#535bf2] font-500 decoration-inherit"
+      class="font-500 text-[#646cff] decoration-inherit hover:text-[#535bf2]"
       href="https://vuejs.org/guide/quick-start.html#local"
       target="_blank"
     >
@@ -35,7 +35,7 @@ const count = ref(0);
   <p class="my-4">
     Install
     <a
-      class="text-[#646cff] hover:text-[#535bf2] font-500 decoration-inherit"
+      class="font-500 text-[#646cff] decoration-inherit hover:text-[#535bf2]"
       href="https://github.com/vuejs/language-tools"
       target="_blank"
     >
@@ -43,7 +43,7 @@ const count = ref(0);
     </a>
     in your IDE for a better DX
   </p>
-  <p class="text-gray-500 my-4">
+  <p class="my-4 text-gray-500">
     Click on the Vite and Vue logos to learn more
   </p>
 </template>
