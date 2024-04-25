@@ -28,8 +28,8 @@ const count = ref(0);
       href="https://vuejs.org/guide/quick-start.html#local"
       target="_blank"
     >
-      create-vue
-    </a>
+      create-vue</a
+    >
     , the official Vue + Vite starter
   </p>
   <p class="my-4">

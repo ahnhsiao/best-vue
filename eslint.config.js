@@ -1,7 +1,7 @@
 import globals from "globals";
 import js from "@eslint/js";
-import pluginVue from "eslint-plugin-vue";
 import tseslint from "typescript-eslint";
+import pluginVue from "eslint-plugin-vue";
 import parserVue from "vue-eslint-parser";
 import pluginPrettier from "eslint-plugin-prettier/recommended";
 
