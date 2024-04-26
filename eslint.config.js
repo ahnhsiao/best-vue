@@ -1,12 +1,13 @@
-import globals from "globals";
 import js from "@eslint/js";
-import tseslint from "typescript-eslint";
-import pluginVue from "eslint-plugin-vue";
-import parserVue from "vue-eslint-parser";
 import pluginPrettier from "eslint-plugin-prettier/recommended";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
+import pluginVue from "eslint-plugin-vue";
+import globals from "globals";
+import tseslint from "typescript-eslint";
+import parserVue from "vue-eslint-parser";
 
 /** @type {import("eslint").Linter.FlatConfig[]} */
-const config = [
+export default [
   js.configs.recommended,
   ...pluginVue.configs["flat/recommended"],
   ...tseslint.configs.recommended,
@@ -22,7 +23,12 @@ const config = [
         ecmaVersion: "latest",
       },
     },
+    plugins: {
+      "simple-import-sort": simpleImportSort,
+    },
+    rules: {
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error",
+    },
   },
 ];
-
-export default config;
