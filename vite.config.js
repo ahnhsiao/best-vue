@@ -3,9 +3,9 @@ import { fileURLToPath, URL } from "node:url";
 import vue from "@vitejs/plugin-vue";
 import autoprefixer from "autoprefixer";
 import tailwind from "tailwindcss";
-import { defineConfig } from "vite";
 
-export default defineConfig({
+/** @type {import('vite').UserConfig} */
+export default {
   plugins: [vue()],
   css: {
     postcss: {
@@ -17,4 +17,8 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
-});
+  server: {
+    port: 80,
+    host: true,
+  },
+};
