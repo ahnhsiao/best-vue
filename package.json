@@ -5,12 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "build": "vue-tsc --build --force && vite build",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
-    "lint:fix": "eslint . --fix",
-    "lint:format": "prettier --ignore-unknown --check --write .",
+    "lint:fix": "eslint src/ --fix",
+    "lint:format": "prettier --ignore-unknown --check --write src/",
     "lint:style": "stylelint --fix **/*.{vue,css}",
     "prepare": "husky",
     "git:commit": "git-cz"
@@ -29,6 +29,7 @@
     "@vitejs/plugin-vue": "^5.0.4",
     "autoprefixer": "^10.4.19",
     "commitizen": "^4.3.0",
+    "concurrently": "^8.2.2",
     "eslint": "^9.1.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
